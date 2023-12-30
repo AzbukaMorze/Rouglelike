@@ -1,5 +1,115 @@
-.main-page{
+.start-page{
     background: black;
     display: flex;
     justify-content: center;
 }
+.modal {
+    display: none;
+    position: fixed; /* Фиксация при прокрутке */
+    z-index: 1000; /* Закрепить */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включить прокрутку если нужно */
+    background-color: rgba(0,0,0,0.95); /* Темный фон с непрозрачностью */
+  }
+  
+  /* Стиль содержимого модального окна */
+/* Стиль заголовка в модальном окне */
+
+.modal-content h1{
+    margin:  5% auto;
+    font-size: 2em; /* Увеличить размер шрифта */
+    text-align: center; /* Выравнивание по центру */
+    margin-bottom: 20px; /* Отступ снизу */
+    font-family: 'Press Start 2P', cursive;
+  }
+  .game-description {
+    display: block;
+    background-color: #f44336; /* Тёмно-красный фон */
+    padding: 2em;
+    margin: 2em auto; /* Центрирование блока */
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff; /* Белый текст для контраста */
+    font-family: 'Press Start 2P', cursive;
+    max-width: 95%; /* Установка максимальной ширины для предотвращения выхода за пределы экрана */
+    box-sizing: border-box; /* Убедитесь, что padding не увеличивает размер блока */
+  }
+  
+  .game-description h2 {
+    font-size: 1.3em;
+    margin: 0.5em;
+    color: #ffd700;
+  }
+  
+  .game-description p {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .game-description ul {
+    list-style: none; /* Убрать маркеры списка */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Выравнивание текста по центру для списка */
+  }
+  
+  .game-description ul li {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    display: inline-block; /* Элементы списка будут в строке */
+    text-align: center; /* Выравнивание текста элементов списка по левому краю */
+    max-width: 90%; /* Максимальная ширина элементов списка, чтобы они не выходили за пределы */
+  }
+  
+  .game-description ul li:before {
+    content: '•'; /* Добавляем буллеты */
+    color: #ffd700; /* Цвет буллетов золотой */
+    font-weight: bold; /* Сделать буллеты жирными */
+    display: inline-block; 
+    width: 1.5em; /* Ширина поля для буллета */
+    margin-left: -1.5em; /* Выравнивание буллета с текстом */
+  }
+  
+  
+
+  /* Стиль кнопки начала игры */
+  .start-game-btn {
+    margin: 30% auto;
+    font-size: 3em; /* Увеличить размер шрифта */
+    width: 110px; /* Увеличить ширину кнопки */
+    height: 110px; /* Увеличить высоту кнопки */
+    line-height: 100px; /* Центрировать символ треугольника вертикально */
+    text-align: center; /* Центрировать символ треугольника горизонтально */
+    margin: auto; /* Автоматические отступы для центрирования */
+    display: block; /* Блочный элемент для возможности задать ширину и высоту */
+    border: 6px solid #333; /* Граница кнопки */
+    border-radius: 50%; /* Круглая кнопка */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    background-color: #fff; /* Белый фон кнопки */
+    transition: background-color 0.3s; /* Анимация фона при наведении */
+  }
+  
+  .start-game-btn:hover,
+  .start-game-btn:focus {
+    background-color: #f44336; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
+  }
+  
+  
+  /* Анимация появления модального окна */
+  @keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
+  
+  /* Небольшой респонсив */
+  @media screen and (max-width: 700px){
+    .modal-content {
+      width: 90%;
+    }
+  }
+  

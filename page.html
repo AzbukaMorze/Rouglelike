@@ -5,19 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome!</title>
-    <link rel="stylesheet" href="styles\style.css">
+    <title>Forallofas!</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body class="main-page">
+<body class="start-page">
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h1>Добро пожаловать в игру!</h1>
+            <div class="game-description">
+                <p>Откройте для себя мир, где каждый выбор важен, и каждое приключение уникально.</p>
+                <h2>Как играть:</h2>
+                <ul>
+                    <li>Управление персонажем WAD.</li>
+                    <li>Пробел: заставляет персонажа прыгать.</li>
+                    <li>Цель: избегать препятствий и собирать бонусы для максимального счета.</li>
+                </ul>
+                <p>Good luck and have fun!</p>
+            </div>
+            <button class="start-game-btn" aria-label="Начать игру">&#9658;</button>
+        </div>
+    </div>
+    </div>
     <canvas></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+        integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/modalActions.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/data/collisions.js"></script>
     <script src="js/classes/CollisonBlock.js"></script>
     <script src="js/classes/Sprite.js"></script>
-    <script src="js\classes\Player.js"></script>
-    <script src="js\index.js"></script>
-    <script src="js\playerControls.js"></script>
+    <script src="js/classes/Player.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/playerControls.js"></script>
 </body>
 
 </html>
